@@ -1,0 +1,111 @@
+/* public/assets/css/auth.css */
+.auth-page-container {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.auth-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b, #e11d48);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-link {
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    background-color: var(--bg-card-hover);
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.demo-creds-box {
+    margin-top: 24px;
+    padding: 14px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px dashed rgba(245, 158, 11, 0.3);
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: var(--primary);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.auth-footer a {
+    color: var(--primary);
+    font-weight: 600;
+}

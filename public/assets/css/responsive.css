@@ -1,0 +1,98 @@
+/* public/assets/css/responsive.css - PlayGarba Courtyard Responsive */
+@media (max-width: 860px) {
+    .topbar {
+        padding: 16px 20px;
+    }
+
+    .brand {
+        font-size: 24px;
+    }
+
+    .utilities {
+        gap: 6px;
+        padding: 4px 10px;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+
+    .song-title {
+        font-size: clamp(32px, 7.5vw, 48px);
+    }
+
+    .artist {
+        font-size: 15px;
+    }
+
+    .play-button {
+        width: 62px;
+        height: 62px;
+    }
+
+    .live-station-container {
+        left: 16px;
+        bottom: 16px;
+    }
+
+    .circle-perch {
+        padding: 6px 12px 6px 6px;
+    }
+
+    .circle-perch-face {
+        width: 28px;
+        height: 28px;
+    }
+
+    .circle-perch-name {
+        font-size: 0.78rem;
+    }
+
+    .circle-perch-kicker {
+        font-size: 0.62rem;
+    }
+
+    .streaming-via {
+        right: 16px;
+        bottom: 16px;
+        padding: 5px 10px;
+        font-size: 0.65rem;
+    }
+
+    .genre-strip {
+        gap: 16px;
+        padding: 8px 16px;
+    }
+
+    .genre-icon-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .genre-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-shell {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+
+    .live-station-container {
+        position: static;
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .streaming-via {
+        display: none;
+    }
+
+    .genre-strip {
+        width: 100%;
+        border-radius: 0;
+    }
+}

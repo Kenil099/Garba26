@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(150) NOT NULL,
+    email VARCHAR(191) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    avatar VARCHAR(255) DEFAULT '/assets/images/default-avatar.png',
+    role VARCHAR(50) DEFAULT 'user',
+    bio TEXT NULL,
+    is_active INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

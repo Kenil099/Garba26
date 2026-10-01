@@ -1,0 +1,31 @@
+CREATE TABLE IF NOT EXISTS circles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    code VARCHAR(30) NOT NULL UNIQUE,
+    name VARCHAR(150) NOT NULL,
+    host_user_id INTEGER NOT NULL,
+    current_song_id INTEGER NULL,
+    current_playback_time REAL DEFAULT 0.0,
+    is_playing INTEGER DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (host_user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (current_song_id) REFERENCES songs(id) ON DELETE SET NULL
+);
+CREATE TABLE IF NOT EXISTS circle_members (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    circle_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    joined_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (circle_id) REFERENCES circles(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE(circle_id, user_id)
+);
+CREATE TABLE IF NOT EXISTS circle_messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    circle_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    message TEXT NOT NULL,
+    sent_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (circle_id) REFERENCES circles(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

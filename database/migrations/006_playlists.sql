@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS playlists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    description TEXT NULL,
+    cover_image VARCHAR(255) DEFAULT '/assets/images/default-album.png',
+    is_public INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS playlist_songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    playlist_id INTEGER NOT NULL,
+    song_id INTEGER NOT NULL,
+    added_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (playlist_id) REFERENCES playlists(id) ON DELETE CASCADE,
+    FOREIGN KEY (song_id) REFERENCES songs(id) ON DELETE CASCADE
+);

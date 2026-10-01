@@ -1,0 +1,193 @@
+/* public/assets/css/circle.css - Garba Circle (Live Sync Rooms) */
+.circle-landing-page {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 16px;
+}
+
+.circle-graphic-spin {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    border: 2px dashed var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateSlow 20s infinite linear;
+}
+
+.circle-ring-inner {
+    display: flex;
+    gap: 8px;
+    font-size: 1.8rem;
+}
+
+.circle-title {
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+}
+
+.circle-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.join-by-code-box {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.join-form {
+    display: flex;
+    gap: 10px;
+}
+
+.circles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.circle-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    transition: all 0.25s ease;
+}
+
+.circle-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.room-code-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+}
+
+/* Room Page Layout */
+.circle-room-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 28px;
+    min-height: 550px;
+}
+
+.circle-main-stage {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.stage-header {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-badge {
+    background: #e11d48;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+}
+
+.garba-rotating-ring {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 3px solid rgba(245, 158, 11, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px var(--primary-glow);
+    animation: rotateSlow 24s infinite linear;
+}
+
+.ring-track-art img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.circle-sidebar-chat {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.chat-messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chat-bubble {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    font-size: 0.88rem;
+}
+
+.chat-author {
+    font-weight: 700;
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.chat-input-form {
+    padding: 14px;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    gap: 8px;
+}
+
+.chat-input-form input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 8px 16px;
+    color: #fff;
+    outline: none;
+}
+
+@keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

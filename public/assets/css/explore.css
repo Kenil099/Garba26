@@ -1,0 +1,67 @@
+/* public/assets/css/explore.css */
+.explore-tabs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.tab-link:hover, .tab-link.active {
+    background-color: var(--primary);
+    color: #070a11;
+    border-color: var(--primary);
+}
+
+.genres-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.genre-tile {
+    position: relative;
+    padding: 28px 24px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #1c2b4a, #0f172a);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.genre-tile:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-card);
+}
+
+.tile-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.tile-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.style-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}

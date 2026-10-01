@@ -1,0 +1,1 @@
+<!DOCTYPE html><html><body style='background:#0b0f19; color:#fff; padding:30px;'><a href='/admin' style='color:#f59e0b;'>← Admin Dashboard</a><div style='margin-top:20px;'><h1>Edit Album</h1></div></body></html>
